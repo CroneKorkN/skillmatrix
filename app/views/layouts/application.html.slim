@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Skillmatrix
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    header
+      h1 = link_to "Skillmatrix", root_path
+    main
+      = yield
+    footer
+      = link_to "Users", users_path
+      |  |
+      = link_to "Skills", skills_path

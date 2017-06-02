@@ -1,15 +1,15 @@
-h1 Skillmatrix
-
-table
-  tr
-    td
-    - @users.first.user_skills.each do |user_skill|
-      td = user_skill.skill.name
-  - @users.each do |user|
+table.tablesorter
+  thead
     tr
       td
-        = user.name
-      - user.user_skills.each do |user_skill|
+      - @users.first.user_skills.each do |user_skill|
+        td = user_skill.skill.name
+  - @users.each do |user|
+    tbody
+      tr
         td
-          = editable user_skill, :level
-        
+          = user.name
+        - user.user_skills.each do |user_skill|
+          td
+            = editable user_skill, :level
+          

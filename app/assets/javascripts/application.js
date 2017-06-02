@@ -11,14 +11,17 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+// require turbolinks
 //= require jquery
+//= require jquery-tablesorter
 //=
 //= require_tree .
 
 $(document).ready(function(){
   $(this).find("[data-editable]").each(function(){
     // apply aditable independantly. otherwise cant distinguish elements from within editable-plugin
-    $(this).editable()
+    $(this).editable();
   });
+
+  $(".tablesorter").tablesorter();
 });
