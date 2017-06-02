@@ -12,4 +12,13 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//=
 //= require_tree .
+
+$(document).ready(function(){
+  $(this).find("[data-editable]").each(function(){
+    // apply aditable independantly. otherwise cant distinguish elements from within editable-plugin
+    $(this).editable()
+  });
+});

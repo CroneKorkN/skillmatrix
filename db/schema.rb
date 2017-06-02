@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170602073959) do
     t.integer "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "level"
+    t.integer "level", default: 0
     t.index ["level"], name: "index_user_skills_on_level"
     t.index ["skill_id"], name: "index_user_skills_on_skill_id"
     t.index ["user_id"], name: "index_user_skills_on_user_id"
