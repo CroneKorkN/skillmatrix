@@ -1,0 +1,16 @@
+h1 Skillmatrix
+
+table
+  tr
+    td 
+      - @users.first.user_skills.each do |user_skill|
+        td = user_skill.name
+  - @users.each do |user|
+    tr
+      td
+        = user.name
+      - user.user_skills.each do |user_skill|
+        td
+          = user_skill.level
+          | xxx
+        
